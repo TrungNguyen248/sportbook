@@ -1,17 +1,13 @@
 ---
-
+import MainLayout from '../layouts/MainLayout.astro';
+import CourtExplorer from '../components/CourtExplorer.jsx';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Trang chủ">
+  <div class="mb-10">
+    <h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-3 tracking-tight">Tìm và đặt sân nhanh chóng</h1>
+    <p class="text-gray-500 text-lg">Hệ thống đặt sân thể thao hiện đại, trực quan.</p>
+  </div>
+
+  <CourtExplorer client:load />
+</MainLayout>
